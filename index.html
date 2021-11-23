@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registarion</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" href="img/user-logo.ico" type="image/x-icon" />
+    <script defer src="/script.js"></script>
+</head>
+<body>
+        <header class="header-rectangle">
+            <div class="header">
+            <div class="container">
+                <div class="hamburger">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                    <div class="header-wrapper">
+                        <div class="header-logo">ТЕСТ</div>
+                        <nav>
+                            <ul class="header-menu">
+                                <li class="header-menu-item">КЛУБ</li>
+                                <li class="header-menu-item">БАЗА_ЗНАНИЙ</li>
+                                <li class="header-menu-item">ИНСТРУМЕНТЫ</li>
+                            </ul>
+                        </nav>
+                        <div class="header-user">
+                            <img class="header-user-img" src="img/user-logo.svg" alt="Иконка пользователя">
+                            <div class="header-user-enter">ВХОД</div>
+                        </div>
+                        <button type="submit" class="header-registration">РЕГИСТРАЦИЯ</button>
+                        <div class="header-language">RU</div>
+                    </div>
+                    <h1 class="header-text">РЕГИСТРАЦИЯ ЛИЧНОГО КАБИНЕТА</h1>     
+                </div>
+            </div>
+        </header>
+        <div class="registration-modal">
+            <form>
+                <fieldset class="registration-modal-form">
+                    <label class="registration-modal-form-text" for="email">E-mail<span class="registration-modal-form-star">*</span></label>
+                    <input id="email" class="registration-modal-form-field" type="email" title="Введите адрес электронной почты" required>
+                    
+                    <label class="registration-modal-form-text" for="password">Придумайте пароль<span class="registration-modal-form-star">*</span></label>
+                    <input id="password" class="registration-modal-form-field" type="password" title="Укажите пароль" minlength = "6" required>
+                    <label class="registration-modal-form-text" for="password">Подтвердите пароль<span class="registration-modal-form-star">*</span><span id="confirm-message"> Пароли не совпадают</span></label>
+                    <input id="password-confirm" class="registration-modal-form-field" type="password" title="Повторите пароль" minlength = "6" required>
+                    
+                    
+                    <label class="checkbox-label checkbox-label-rule">Я ознакомлен с <a href="#">Условиями, положениями и рисками</a><input id="checkbox-label-rule" type="checkbox" required>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-label checkbox-label-politic">Я ознакомлен с <a href="#">Политикой конфиденциальности</a><input id="checkbox-label-politic" type="checkbox" required>
+                        <span class="checkmark"></span>
+                    </label>
+                    <button class="registration-modal-form-button" type="submit" disabled>РЕГИСТРАЦИЯ</button>
+                </fieldset>
+            </form>    
+        </div>
+</body>
+</html>
