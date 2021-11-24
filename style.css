@@ -454,29 +454,27 @@ input:invalid:required {
 
     .header-menu,
     .header-menu-item.active {
-        margin-left: 10px;
-        margin-right: 10px;
+        padding-left: 0;
+        margin-left: 5px;
+        margin-right: 5px;
         display: flex;
         flex-direction: column;
-        font: 500 12px/15px 'Inter', sans-serif;
+        font: 500 10px/10px 'Inter', sans-serif;
     }
 
     .header-user.active {
         display: flex;
         flex-direction: column;
-        margin-right: 10px;
-        font: 500 12px/15px 'Inter', sans-serif;
+        margin-right: 3px;
+        font: 500 10px/10px 'Inter', sans-serif;
     }
 
     .header-registration.active {
         display: block;
-        font: 500 12px/15px 'Inter', sans-serif;
+        font: 500 10px/10px 'Inter', sans-serif;
+        max-width: 90px;
     }
 
-    .header-language.active {
-        display: block;
-        font: 500 12px/15px 'Inter', sans-serif;
-    }
 
     .registration-modal {
         max-width: 80%;
