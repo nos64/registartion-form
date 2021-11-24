@@ -46,6 +46,7 @@ document.querySelector('.registration-modal-form').addEventListener('input', () 
     const headerUser = document.querySelector('.header-user');
     const headerRegistration = document.querySelector('.header-registration');
     const headerLanguage = document.querySelector('.header-language');
+    const headerUserImg = document.querySelector('.header-user-img');
 
     hamburger.addEventListener('click', function () {
       this.classList.toggle('change');
@@ -55,6 +56,7 @@ document.querySelector('.registration-modal-form').addEventListener('input', () 
       headerUser.classList.toggle('active');
       headerRegistration.classList.toggle('active');
       headerLanguage.classList.toggle('active');
+      headerUserImg.classList.toggle('active');
     });
   }
 

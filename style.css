@@ -465,8 +465,12 @@ input:invalid:required {
     .header-user.active {
         display: flex;
         flex-direction: column;
-        margin-right: 3px;
+        margin-right: 5px;
         font: 500 10px/10px 'Inter', sans-serif;
+    }
+
+    .header-user-img.active {
+        margin-right: 0;
     }
 
     .header-registration.active {
