@@ -5,6 +5,7 @@ body {
     padding: 0;
     background: url("/img/53891.jpg") no-repeat center top / cover;
     width: 100vw;
+    
 }
 
 .header-rectangle {
@@ -106,19 +107,22 @@ body {
     text-transform: uppercase;
 }
 
-.registration-modal {
-    width: 590px;
-    display: block;
+.registration-modal-form {
+    width: fit-content;
     margin-top: 250px;
-    margin-left: auto;
-    margin-right: auto;
-    background: rgba(41, 31, 57, 0.7);
-    border-radius: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient( rgba(16, 21, 44, 0.8), rgba(31, 33, 43, 0.8));
+    border-radius: 1rem;
+    margin-bottom: 2rem;
 }
 
-.registration-modal-form {
+.registration-modal-form-wrapper {
+    width: 500px;
+    border: none;
+    /* padding: 4rem; */
     border: 0;
-    padding: 63px 120px 75px 120px;
+    margin: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -133,7 +137,7 @@ body {
 }
 
 .registration-modal-form-text:first-child {
-    margin-top: 0;
+    margin-top: 50px;
 }
 
 .registration-modal-form-star {
@@ -143,11 +147,12 @@ body {
 
 .registration-modal-form-field {
     height: 40px;
-    padding: 0;
+    width: 100%;
     background: #F3F3F3;
     border-radius: 10px;
     font: 400 16px/17px 'Inter', sans-serif;
     border: 0;
+    /* padding: 10px; */
 }
 
 .registration-modal-form-field:focus {
@@ -163,6 +168,30 @@ input:invalid:required {
     border: .5px solid rgba(248, 145, 145, 0.3);
 }
 
+.registration-modal-form-text--password {
+    position: relative;
+}
+.registration-modal-form__show-pass1{
+position: absolute;
+left: 525px;
+bottom: 335px;
+transform: scale(2);
+z-index: 2;
+cursor: pointer;
+}
+
+.registration-modal-form-text--password-conf {
+    position: relative;
+}
+
+.registration-modal-form__show-pass2{
+    position: absolute;
+    left: 525px;
+    bottom: 220px;
+    transform: scale(2);
+    z-index: 2;
+    cursor: pointer;
+}
 
 /* The container */
 .checkbox-label {
@@ -253,6 +282,7 @@ input:invalid:required {
     font: 600 16px/19px 'Inter', sans-serif;
     color: #FFF;
     cursor: pointer;
+    margin-bottom: 40px;
 }
 
 .registration-modal-form-button:disabled {
@@ -352,7 +382,6 @@ input:invalid:required {
         margin-right: 20px;
     }
 
-
 }
 
 @media screen and (min-width: 600px) and (max-width: 767px) {
@@ -414,6 +443,10 @@ input:invalid:required {
 
     .registration-modal {
         max-width: 80%;
+    }
+
+    .registration-modal-form-wrapper {
+        width: 380px;
     }
 }
 
@@ -479,14 +512,27 @@ input:invalid:required {
         max-width: 90px;
     }
 
+    .registration-modal-form-wrapper {
+        width: 250px;
+    }
+}
 
-    .registration-modal {
-        max-width: 80%;
+@media screen and (max-width: 480px) {
+    .header-text {
+        font-size: 25px;
     }
 
-    .registration-modal-form {
-        padding: 30px 40px 30px 40px;
+    .registration-modal-form-wrapper {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .header-text {
+        font-size: 20px;
     }
 
-
+    .registration-modal-form-wrapper {
+        width: 150px;
+    }
 }

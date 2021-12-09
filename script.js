@@ -1,4 +1,4 @@
-{ //Проверка формы перед отправкой
+
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const passwordConfirm = document.getElementById('password-confirm');
@@ -6,7 +6,10 @@ const confirmMessage = document.getElementById('confirm-message')
 const regBtn = document.querySelector('.registration-modal-form-button');
 const checkboxLabelRule = document.getElementById('checkbox-label-rule');
 const checkboxLabelPolitic = document.getElementById('checkbox-label-politic');
+const eye1 = document.querySelector('.registration-modal-form__show-pass1');
+const eye2 = document.querySelector('.registration-modal-form__show-pass2');
 
+//Проверка формы перед отправкой
 const checkPass = () => {
     password.addEventListener('keyup', passwordValidate);
     passwordConfirm.addEventListener('keyup', passwordValidate);
@@ -24,12 +27,11 @@ const checkPass = () => {
 
 const checkCheckboxes = () => {
     if (checkboxLabelRule.checked && checkboxLabelPolitic.checked) {
-        console.log('111')
         return true
     }
 }
 
-document.querySelector('.registration-modal-form').addEventListener('input', () => {
+document.querySelector('.registration-modal-form').addEventListener('input', (event) => {
     event.preventDefault();
     checkPass()
     if (email.value && password.value && passwordConfirm.value && password.value === passwordConfirm.value && checkCheckboxes()) {
@@ -38,7 +40,6 @@ document.querySelector('.registration-modal-form').addEventListener('input', () 
         regBtn.disabled = true;
     }
 })
-}
 // Burger-menu
 {
     const hamburger = document.querySelector(".hamburger");
@@ -58,8 +59,25 @@ document.querySelector('.registration-modal-form').addEventListener('input', () 
       headerLanguage.classList.toggle('active');
       headerUserImg.classList.toggle('active');
     });
-  }
+}
 
 
+//Show password
 
+eye1.addEventListener('click', () => {
+    if(password.getAttribute('type') === 'password') {
+        password.setAttribute('type', 'text');
+    } else {
+        password.setAttribute('type', 'password');
+    }
+});
+
+eye2.addEventListener('click', () => {
+
+    if(passwordConfirm.getAttribute('type') === 'password') {
+        passwordConfirm.setAttribute('type', 'text');
+    } else {
+        passwordConfirm.setAttribute('type', 'password');
+    }
+});
 
