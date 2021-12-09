@@ -448,6 +448,17 @@ cursor: pointer;
     .registration-modal-form-wrapper {
         width: 380px;
     }
+
+    .registration-modal-form__show-pass1{
+        left: 400px;
+        bottom: 335px;
+        }
+        
+        .registration-modal-form__show-pass2{
+            left: 400px;
+            bottom: 220px;
+        }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -515,6 +526,16 @@ cursor: pointer;
     .registration-modal-form-wrapper {
         width: 250px;
     }
+
+    .registration-modal-form__show-pass1{
+        left: 275px;
+        bottom: 380px;
+        }
+        
+        .registration-modal-form__show-pass2{
+            left: 275px;
+            bottom: 250px;
+        }
 }
 
 @media screen and (max-width: 480px) {
@@ -525,6 +546,16 @@ cursor: pointer;
     .registration-modal-form-wrapper {
         width: 200px;
     }
+
+    .registration-modal-form__show-pass1{
+        left: 230px;
+        bottom: 380px;
+        }
+        
+        .registration-modal-form__show-pass2{
+            left: 230px;
+            bottom: 250px;
+        }
 }
 
 @media screen and (max-width: 360px) {
@@ -535,4 +566,14 @@ cursor: pointer;
     .registration-modal-form-wrapper {
         width: 150px;
     }
+
+    .registration-modal-form__show-pass1{
+        left: 175px;
+        bottom: 445px;
+        }
+        
+        .registration-modal-form__show-pass2{
+            left: 175px;
+            bottom: 295px;
+        }
 }
